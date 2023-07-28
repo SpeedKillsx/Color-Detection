@@ -1,0 +1,36 @@
+<html lang="en">
+<head class="head">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color detection</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body class="body">
+    
+    <center><h1 style="color: hwb(113 25% 67% / 0.922);">COLOR DETECTION</h1></center>
+    <br>
+    <div class="container-video">
+        <center>
+            <img src="{{url_for('video')}}" width="50%" height="50%">
+        </center>
+    </div>
+    <br>
+    <form action="{{url_for('select')}}" method="post">
+    <center>
+        <label for="colors"><h1>Choose a color:</h1></label>
+        <select class="select" name="color" id="col">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+            <option value="orange">Blue</option>            
+  
+        </select>
+        <br>
+        <br>
+        <input type="submit" class="select" value="Detect"> 
+        
+    </center>
+    
+    </form>
+</body>
+</html>
